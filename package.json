@@ -1,0 +1,22 @@
+{
+  "name": "claude-review-action",
+  "version": "1.0.0",
+  "description": "Automated code review using Claude API",
+  "main": "src/review.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "lint": "eslint src/**/*.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@octokit/rest": "^20.0.2",
+    "minimatch": "^9.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
