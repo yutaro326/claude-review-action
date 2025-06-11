@@ -19,9 +19,10 @@ async function main() {
   // Extract GitHub context from environment
   const context = JSON.parse(process.env.GITHUB_CONTEXT || '{}');
   const pullRequest = context.event?.pull_request;
+  const hasChangesText = !!process.env.CHANGES_TEXT;
   
-  if (!pullRequest) {
-    console.log('Not a pull request event, skipping review');
+  if (!pullRequest && !hasChangesText) {
+    console.log('Not a pull request event and no CHANGES_TEXT provided, skipping review');
     return;
   }
 

@@ -29,7 +29,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: your-org/claude-review-action@v2.0.1
+      - uses: your-org/claude-review-action@v2.0.2
         with:
           api-key: ${{ secrets.CLAUDE_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: your-org/claude-review-action@v2.0.1
+      - uses: your-org/claude-review-action@v2.0.2
         with:
           api-key: ${{ secrets.CLAUDE_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -102,7 +102,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: your-org/claude-review-action@v2.0.1
+      - uses: your-org/claude-review-action@v2.0.2
         with:
           api-key: ${{ secrets.CLAUDE_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -137,14 +137,17 @@ The action posts comments like:
 
 ### Common Issues
 
-**Action fails with "CLAUDE_API_KEY not found"**
+Action fails with **"CLAUDE_API_KEY not found"**
+
 - Ensure you've added your Claude API key to repository secrets
 
-**Comments not posted**
+Comments **not posted**
+
 - Check that `GITHUB_TOKEN` has `pull-requests: write` permission
 - Verify the file patterns match your changed files
 
-**Too many API calls**
+**Too many** API calls
+
 - Reduce `max-files` limit
 - Use more specific `file-patterns`
 
@@ -187,6 +190,7 @@ MIT License - see LICENSE file for details.
 ## Support
 
 For issues and questions:
+
 - Check the [troubleshooting section](#troubleshooting)
 - Open an issue on GitHub
 - Review the [Claude API documentation](https://docs.anthropic.com/)
