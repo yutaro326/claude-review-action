@@ -29,7 +29,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: your-org/claude-review-action@v2
+      - uses: your-org/claude-review-action@v2.0.1
         with:
           api-key: ${{ secrets.CLAUDE_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: your-org/claude-review-action@v2
+      - uses: your-org/claude-review-action@v2.0.1
         with:
           api-key: ${{ secrets.CLAUDE_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -102,7 +102,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: your-org/claude-review-action@v2
+      - uses: your-org/claude-review-action@v2.0.1
         with:
           api-key: ${{ secrets.CLAUDE_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
