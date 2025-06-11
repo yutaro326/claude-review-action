@@ -1,4 +1,4 @@
-import minimatch from 'minimatch';
+import { minimatch } from 'minimatch';
 
 export async function getChangedFiles(octokit, owner, repo, pullNumber, filePatterns, maxFiles = 10) {
   try {
